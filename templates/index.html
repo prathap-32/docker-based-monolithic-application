@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Health Records - Migrant Workers</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://use.typekit.net/yjp3aho.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body { font-family: "sofia-pro", sans-serif; }
+  </style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+  <nav class="bg-white shadow-lg" data-id="main-navigation">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+        <div class="flex items-center">
+          <div class="flex-shrink-0">
+            <h1 class="text-2xl font-bold text-indigo-600" data-id="nav-logo">Zencare</h1>
+          </div>
+        </div>
+        <div class="flex items-center space-x-4">
+          <a href="#features" class="text-gray-700 hover:text-indigo-600 transition-colors" data-id="nav-features">Features</a>
+          <a href="#about" class="text-gray-700 hover:text-indigo-600 transition-colors" data-id="nav-about">About</a>
+          <a href="#contact" class="text-gray-700 hover:text-indigo-600 transition-colors" data-id="nav-contact">Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="text-center mb-16" data-id="hero-section">
+      <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6" data-id="hero-title">
+        Digital Health Records
+        <span class="block text-indigo-600">for Migrant Workers</span>
+      </h1>
+      <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto" data-id="hero-description">
+        Secure, accessible, and comprehensive health record management system designed specifically for migrant workers and healthcare providers.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&h=400&fit=crop" 
+             alt="Healthcare Technology" 
+             class="w-full sm:w-96 h-48 object-cover rounded-lg shadow-lg"
+             data-id="hero-image">
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8 mb-16" data-id="portal-cards">
+      <!-- Worker Portal -->
+      <div class="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow" data-id="worker-portal-card">
+        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+          <i data-lucide="user" class="w-8 h-8 text-blue-600"></i>
+        </div>
+        <h3 class="text-2xl font-bold text-gray-900 mb-4" data-id="worker-portal-title">Worker Portal</h3>
+        <p class="text-gray-600 mb-6" data-id="worker-portal-description">
+          Register, access your health records, and download your digital health card with QR code.
+        </p>
+        <div class="space-y-3">
+          <a href="{{ url_for('worker_register') }}" 
+             class="block w-full bg-blue-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+             data-id="worker-register-btn">
+            Register as Worker
+          </a>
+          <a href="{{ url_for('worker_login') }}" 
+             class="block w-full border-2 border-blue-600 text-blue-600 py-3 px-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
+             data-id="worker-login-btn">
+            Worker Login
+          </a>
+        </div>
+      </div>
+
+      <!-- Doctor Portal -->
+      <div class="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow" data-id="doctor-portal-card">
+        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+          <i data-lucide="stethoscope" class="w-8 h-8 text-green-600"></i>
+        </div>
+        <h3 class="text-2xl font-bold text-gray-900 mb-4" data-id="doctor-portal-title">Doctor Portal</h3>
+        <p class="text-gray-600 mb-6" data-id="doctor-portal-description">
+          Access patient records with consent verification, manage treatments, and emergency override access.
+        </p>
+        <div class="space-y-3">
+          <a href="{{ url_for('doctor_register') }}" 
+             class="block w-full bg-green-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-green-700 transition-colors"
+             data-id="doctor-register-btn">
+            Register as Doctor
+          </a>
+          <a href="{{ url_for('doctor_login') }}" 
+             class="block w-full border-2 border-green-600 text-green-600 py-3 px-4 rounded-lg font-semibold hover:bg-green-50 transition-colors"
+             data-id="doctor-login-btn">
+            Doctor Login
+          </a>
+        </div>
+      </div>
+
+      <!-- Admin Portal -->
+      <div class="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow" data-id="admin-portal-card">
+        <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+          <i data-lucide="shield-check" class="w-8 h-8 text-purple-600"></i>
+        </div>
+        <h3 class="text-2xl font-bold text-gray-900 mb-4" data-id="admin-portal-title">Admin Portal</h3>
+        <p class="text-gray-600 mb-6" data-id="admin-portal-description">
+          Monitor system statistics, audit access logs, and manage break glass access events.
+        </p>
+        <div class="space-y-3">
+          <a href="{{ url_for('admin_register') }}" 
+             class="block w-full bg-purple-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
+             data-id="admin-register-btn">
+            Register as Admin
+          </a>
+          <a href="{{ url_for('admin_login') }}" 
+             class="block w-full border-2 border-purple-600 text-purple-600 py-3 px-4 rounded-lg font-semibold hover:bg-purple-50 transition-colors"
+             data-id="admin-login-btn">
+            Admin Login
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="py-16 bg-white rounded-xl shadow-lg mb-16" data-id="features-section" id="features">
+      <div class="px-8">
+        <h2 class="text-3xl font-bold text-center text-gray-900 mb-12" data-id="features-title">Key Features</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="text-center" data-id="feature-secure">
+            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i data-lucide="lock" class="w-8 h-8 text-blue-600"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Secure Access</h3>
+            <p class="text-gray-600">OTP verification and biometric authentication ensure secure access to medical records.</p>
+          </div>
+          
+          <div class="text-center" data-id="feature-emergency">
+            <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i data-lucide="alert-triangle" class="w-8 h-8 text-red-600"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Emergency Access</h3>
+            <p class="text-gray-600">Break glass access for emergency situations with complete audit trail.</p>
+          </div>
+          
+          <div class="text-center" data-id="feature-digital-card">
+            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i data-lucide="qr-code" class="w-8 h-8 text-green-600"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Digital Health Card</h3>
+            <p class="text-gray-600">Downloadable PDF health cards with QR codes for quick identification.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AI Assistant Section -->
+    <div class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl shadow-lg p-8 text-white text-center mb-16" data-id="ai-assistant-section">
+      <h2 class="text-3xl font-bold mb-4" data-id="ai-assistant-title">AI Health Assistant</h2>
+      <p class="text-xl mb-6 opacity-90" data-id="ai-assistant-description">
+        Multilingual chatbot to answer health-related questions and provide risk assessments based on your health parameters.
+      </p>
+      <button class="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors" 
+              data-id="ai-chat-btn">
+        Start Health Chat
+      </button>
+    </div>
+  </main>
+
+  <footer class="bg-gray-900 text-white py-12" data-id="main-footer">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-xl font-bold mb-4" data-id="footer-about-title">About Zencare</h3>
+          <p class="text-gray-400" data-id="footer-about-text">
+            Providing secure and accessible health record management for migrant workers worldwide.
+          </p>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-4" data-id="footer-portals-title">Portals</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li><a href="{{ url_for('worker_login') }}" class="hover:text-white transition-colors" data-id="footer-worker-link">Worker Login</a></li>
+            <li><a href="{{ url_for('doctor_login') }}" class="hover:text-white transition-colors" data-id="footer-doctor-link">Doctor Login</a></li>
+            <li><a href="{{ url_for('admin_login') }}" class="hover:text-white transition-colors" data-id="footer-admin-link">Admin Login</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-4" data-id="footer-support-title">Support</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li><a href="#" class="hover:text-white transition-colors" data-id="footer-help-link">Help Center</a></li>
+            <li><a href="#" class="hover:text-white transition-colors" data-id="footer-contact-link">Contact Us</a></li>
+            <li><a href="#" class="hover:text-white transition-colors" data-id="footer-privacy-link">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-4" data-id="footer-contact-title">Contact Info</h4>
+          <div class="text-gray-400 space-y-2">
+            <p data-id="footer-email">support@zencare.com</p>
+            <p data-id="footer-phone">+91 98000 98000</p>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+        <p data-id="footer-copyright">© 2025 Zencare Digital Health Records. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module">
+    // Initialize Lucide icons
+    lucide.createIcons();
+
+    // AI Chat functionality
+    document.querySelector('[data-id="ai-chat-btn"]').addEventListener('click', () => {
+      alert('AI Health Assistant coming soon! This will provide multilingual support for health-related questions.');
+    });
+  </script>
+</body>
+</html>
