@@ -1,14 +1,14 @@
 
 # Docker Based Monolithic Application
-### Digital Health Record Management System
+### Digital Health Record Management System for Migrant Workers
 ---
 
 ## 📌 Project Overview
-The **Digital Health Record Management System (DHRMS)** is a web-based application designed to store and manage patient health records digitally with secure, role-based access.
+The Digital Health Record Management System (DHRMS) for Migrant Workers is a web-based application designed to store and manage migrant workers’ health records digitally with secure, role-based access.
 
-This project is built using a **Monolithic architecture** and a **multi-service backend**, orchestrated using **Docker Compose** on a **Linux environment**, following DevOps best practices.
+This project is built using a 3-tier architecture with a multi-service backend, orchestrated using Docker Compose on a Linux environment, following DevOps best practices.
 
-The system focuses only on health record management and does **not perform medical diagnosis or treatment**.
+The system enables location-independent access to health records, ensuring continuity of medical information for migrant workers as they move between regions.
 
 ---
 
