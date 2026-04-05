@@ -14,7 +14,8 @@ spec:
     spec:
       containers:
         - name: web-app
-          image: prathap32/monolithic-app:1.0.0
+          image: prathap32/web-app:latest
+          imagePullPolicy: Always
           ports:
             - containerPort: 5000
           env:
